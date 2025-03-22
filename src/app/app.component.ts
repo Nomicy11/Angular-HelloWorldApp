@@ -24,9 +24,9 @@ export class AppComponent implements OnInit {
   onInput($event: Event) {
     console.log("Change Event Occurred!", ($event.target as HTMLInputElement).value);
   
-    this.userName = ($event.target as HTMLInputElement).value;  // ✅ Update userName
+    this.userName = ($event.target as HTMLInputElement).value;  
     
-    const nameRegex = /^[A-Z]{1}[a-zA-Z\s]{2,}$/;  // ✅ Fixed regex
+    const nameRegex = /^[A-Z]{1}[a-zA-Z\s]{2,}$/;  
   
     if (nameRegex.test(this.userName)) {
       this.nameError = "";
